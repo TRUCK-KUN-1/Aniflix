@@ -112,7 +112,6 @@ main .heroContainer{
     aspect-ratio: 3 / 2;
     width: 100%;
     min-height: 100vh;
-    max-height: 700px;
     background-image: url(One_piece_background.png);
     background-repeat: no-repeat;
     background-size: cover;
