@@ -70,6 +70,7 @@ a{
     font-size: 30px;
     font-weight: 600;
     word-spacing: 20px;
+    color: var(--font-color);
     display: flex;
     align-items: flex-end;
 }
