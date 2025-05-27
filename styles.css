@@ -109,6 +109,11 @@ a{
     display: none;
 }
 
+main{
+    width: 100%;
+    min-height: 100%;
+}
+
 main .heroContainer{
     aspect-ratio: 3 / 2;
     width: 100%;
