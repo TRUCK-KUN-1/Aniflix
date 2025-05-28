@@ -1,5 +1,5 @@
 :root{
-    --bg-color: rgb(255, 255, 255);
+    --bg-color: rgb(228, 255, 255);
     --nav-color: rgb(255, 255, 255);
     --nav-shadow: rgb(24, 177, 238);
     --theme-color-1: rgb(24, 178, 238);
@@ -117,6 +117,10 @@ main{
     min-height: 100vh;
 }
 
+main > div{
+    margin: 0px 0px 50px;
+}
+
 main .heroContainer{
     aspect-ratio: 3 / 2;
     width: 100%;
@@ -173,6 +177,33 @@ main .heroContainer .hero .svg img{
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+}
+
+main .trending{
+    width: 100%;
+    height: fit-content;
+    min-height:50vh ;
+    padding: 0 20px;
+}
+
+main .trending .CardContainer{
+    overflow-x: scroll;
+    display: flex;
+    gap: 0px 20px;
+    flex-wrap: nowrap;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 20px 0px 0px;
+}
+
+main .trending .CardContainer .card{
+    /* display: inline-block; */
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(140, 255, 192);
 }
 
 @media (max-width: 750px) {
@@ -254,6 +285,14 @@ main .heroContainer .hero .svg img{
 
     main .heroContainer .hero .svg img{
         height: 200px;
+    }
+
+    main .trending h1{
+        font-size: 2rem;
+    }
+
+    main .trending p{
+        font-size: 1rem;
     }
 
 }
