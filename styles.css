@@ -3,6 +3,7 @@
     --nav-color: rgb(255, 255, 255);
     --card-color: rgb(255, 252, 245);
     --card-Shadow-color: rgb(180, 220, 220);
+    --card-hover-color: rgba(24, 177, 238, 0.5);
     --nav-shadow: rgb(24, 177, 238);
     --theme-color-1: rgb(24, 178, 238);
     --font-color: rgb(0, 0, 0);
@@ -100,6 +101,12 @@ a{
 .navbar nav .light-dark{
     color: var(--font-color);
 }
+
+.navbar nav .light-dark:hover{
+    color: var(--theme-color-1);
+    text-shadow: 0px 1px 1px rgba(0, 100, 181, 0.589);
+}
+
 
 .navbar .hamburger{
     display: none;
@@ -201,12 +208,55 @@ main .trending .CardContainer{
 }
 
 main .trending .CardContainer .card{
-    /* display: inline-block; */
+    overflow: hidden;
+    position: relative;
     flex: 0 0 auto;
     width: 200px;
     height: 350px;
     border-radius: 10px;
     background-color: var(--card-color);
+}
+
+main .trending .CardContainer .card:hover > .trendingCardHover{
+    position: absolute;
+    display: block;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main .trending .CardContainer .card .trendingCardHover{
+    display: none;
+}
+
+main .trending .CardContainer .card .trendingCardHover #watchlist-inp{
+    display: none;
+}
+
+main .trending .CardContainer .card .trendingCardHover a,
+main .trending .CardContainer .card .trendingCardHover .watchlist1,
+main .trending .CardContainer .card .trendingCardHover .watchlist2{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--theme-color-1);
+}
+
+main .trending .CardContainer .card .trendingCardHover .watchlist2{
+    display: none;
+}
+
+#watchlist-inp:checked + .watchlist1 + .watchlist2{
+    display: inline-block;
+}
+
+#watchlist-inp:checked  + .watchlist1{
+    display: none;
 }
 
 main .trending .CardContainer .card img{
@@ -220,10 +270,26 @@ main .trending .CardContainer .card h3{
     width: 100%;
 }
 
-main .trending .CardContainer .card p{
+main .trending .CardContainer .card .description{
     padding: 0px 5px;
-    height: 100px;
+    height: 70px;
     width: 100%;
+}
+
+main .trending .CardContainer .card .durationContainer{
+    padding: 0px 5px;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .trending .CardContainer .card .durationContainer .duration{    
+    padding: 0px 5px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 750px) {
