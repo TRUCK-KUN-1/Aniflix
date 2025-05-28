@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniflix</title>
+    <link rel="icon" href="images\letter_a_transparent.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="icon">
+            <div class="iconImg">
+                <img src="images\letter_a_transparent.png" alt="">
+            </div>
+            <div class="iconName">
+                <p>niflix</p>
+            </div>
+        </div>
+        <input type="checkbox" id="hamburger-inp">
+        <label for="hamburger-inp" class="hamburger">☰</label>        
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#trending">Trending</a>
+            <a href="#popular">Popular Shows</a>
+            <a href="#reviews">Reviews</a>
+            <input type="checkbox" id="light-dark-inp">
+            <label for="light-dark-inp" class="light-dark">
+                light/Dark
+            </label>
+        </nav>
+    </header>
+    <main>
+        <div class="heroContainer" id="home">
+            <div class="hero">
+                <div class="intro">
+                    <h1>Aniflix</h1>
+                    <p>Sail through the trending Animes</p>
+                    <a href="#trending" class="trendingBtn">Trending Movies</a>
+                </div>
+                <div class="svg">
+                    <img src="images\One_piece.svg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="trending" id="trending">
+            <h1>Trending Movies</h1>
+            <p>The Movies Everyone's Talking about</p>
+            <div class="CardContainer">
+                <div class="card">
+                    <img src="images\look back.jpeg" alt="">
+                    <h3>Look Back</h3>
+                    <p>When art speaks louder than words—and cuts deeper too.</p>
+                </div>
+                <div class="card">
+                    <img src="images\spy x familiy.png" alt="">
+                    <h3>Spy x Family Code: White</h3>
+                    <p>Spy action? Check. Waifu power? Check. Anya being iconic? Double check.</p>
+                </div>
+                <div class="card">
+                    <img src="images\my oni girl.png" alt="">
+                    <h3>My Oni Girl</h3>
+                    <p>Shy boy meets fiery oni—emotions (and umbrellas) fly!</p>
+                </div>
+                <div class="card">
+                    <img src="images\suzume.png" alt="">
+                    <h3>Suzume</h3>
+                    <p>It's not just about closing doors, it's about opening hearts.</p>
+                </div>
+                <div class="card">
+                    <img src="images\haikyuu.png" alt="">
+                    <h3>Haikyu: The Dumpster Battle</h3>
+                    <p>The ultimate showdown that fans have been waiting for—pure hype!</p>
+                </div>
+            </div>
+        </div>
+        <div class="popular" id="popular"></div>
+        <div class="reviews" id="reviews"></div>
+    </main>
+    <footer></footer>
+</body>
+</html>
