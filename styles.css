@@ -194,7 +194,7 @@ main .heroContainer .hero .svg img{
 main .trending{
     width: 100%;
     height: max-content;
-/*     min-height:50vh ; */
+    /* min-height:50vh ; */
     padding: 0 20px;
 }
 
@@ -306,7 +306,7 @@ main .trending .CardContainer .card .durationContainer .duration{
 main .popular{
     width: 100%;
     height: max-content;
-/*     min-height:50vh ; */
+    /* min-height:50vh ; */
     padding: 0 20px;
 }
 
@@ -486,12 +486,20 @@ main .popular .CardContainer .card .dataContainer .modalContainer .watchNow-btn 
         height: 200px;
     }
 
+    main .trending{
+        overflow-x: scroll;
+    }
+
     main .trending h1{
         font-size: 2rem;
     }
 
     main .trending p{
         font-size: 1rem;
-    }
+   }
+
+   main .popular{
+        overflow-x: scroll;
+   }
 
 }
