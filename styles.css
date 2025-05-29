@@ -1,0 +1,497 @@
+:root{
+    --bg-color: rgb(228, 255, 255);
+    --nav-color: rgb(255, 255, 255);
+    --card-color: rgb(255, 252, 245);
+    --card-Shadow-color: rgb(24, 177, 238);
+    --card-hover-color: rgba(24, 177, 238, 0.5);
+    --nav-shadow: rgb(24, 177, 238);
+    --theme-color-1: rgb(24, 178, 238);
+    --font-color: rgb(0, 0, 0);
+}
+
+html:has(#light-dark-inp:checked){
+    --bg-color: rgb(12, 12, 12);
+    --nav-color: rgb(18, 18, 18);
+    --card-color: rgb(25, 25, 25);
+    --font-color: rgb(255, 255, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    height: 1000vh;
+    color: var(--font-color);
+}
+
+a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 1000;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--nav-shadow);
+    box-shadow: 0px 1px 2px var(--nav-shadow);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    background-color: var(--nav-color);
+}
+
+
+.navbar .icon{
+    aspect-ratio: 4 / 1;
+    height: 100%;
+    display: flex;
+}
+
+.navbar .icon .iconImg{
+    height: 100%;
+    width: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .icon .iconImg img{
+    height: 50px;
+    width: 50px;
+}
+
+.navbar .icon .iconName{
+    height: 100%;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    word-spacing: 20px;
+    color: var(--font-color);
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar nav{
+    height: 100%;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar nav a:hover{
+    color: var(--theme-color-1);
+    text-shadow: 0px 1px 1px rgba(0, 100, 181, 0.589);
+}
+
+.navbar nav #light-dark-inp{    
+    display: none;
+}
+
+.navbar nav .light-dark{
+    color: var(--font-color);
+}
+
+.navbar nav .light-dark:hover{
+    color: var(--theme-color-1);
+    text-shadow: 0px 1px 1px rgba(0, 100, 181, 0.589);
+}
+
+
+.navbar .hamburger{
+    display: none;
+    font-size: 25px;
+}
+
+.navbar .hamburger{
+    cursor: pointer;
+}
+
+.navbar #hamburger-inp{
+    display: none;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+
+main > div{
+    margin: 0px 0px 50px;
+}
+
+main .heroContainer{
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/One_piece_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+main .heroContainer .hero{
+    padding: 10vh 6rem 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient( to right, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+    color: rgb(255, 255, 255);
+}
+
+main .heroContainer .hero .intro{
+    width: calc((100% - 40px) / 2) ;
+    min-width: 400px;
+}
+
+main .heroContainer .hero .intro h1{
+    font-size: 2.8rem;
+    padding: 0.5rem 0rem;
+}
+
+main .heroContainer .hero .intro p{
+    font-size: 1.4rem;
+    padding: 1rem 0rem;
+}
+
+main .heroContainer .hero .intro .trendingBtn{
+    display: inline-block;
+    background-color: var(--theme-color-1);
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+main .heroContainer .hero .svg img{
+    height: 300px;
+    padding: 50px 0;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+main .trending{
+    width: 100%;
+    height: fit-content;
+    min-height:50vh ;
+    padding: 0 20px;
+}
+
+main .trending .CardContainer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    gap: 0px 20px;
+    flex-wrap: nowrap;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 20px 0px 10px;
+}
+
+main .trending .CardContainer .card{
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: var(--card-color);
+    box-shadow: 1px 1px 2px var(--card-Shadow-color);
+    transition: top 0.5s ease;
+}
+
+main .trending .CardContainer .card:hover{
+    top: -10px;
+    box-shadow: 1px 4px 3px var(--card-Shadow-color);
+}
+
+main .trending .CardContainer .card:hover > .trendingCardHover{
+    position: absolute;
+    display: block;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main .trending .CardContainer .card .trendingCardHover{
+    display: none;
+}
+
+main .trending .CardContainer .card .trendingCardHover input{
+    display: none;
+}
+
+main .trending .CardContainer .card .trendingCardHover a,
+main .trending .CardContainer .card .trendingCardHover .watchlist1,
+main .trending .CardContainer .card .trendingCardHover .watchlist2{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--theme-color-1);
+}
+
+main .trending .CardContainer .card .trendingCardHover .watchlist2{
+    display: none;
+}
+
+main .trending .CardContainer .card .trendingCardHover input:checked + .watchlist1 + .watchlist2{
+    display: inline-block;
+}
+
+main .trending .CardContainer .card .trendingCardHover input:checked  + .watchlist1{
+    display: none;
+}
+
+main .trending .CardContainer .card img{
+    height: 200px;
+    width: 200px;
+}
+
+main .trending .CardContainer .card h3{
+    padding: 0px 5px;
+    height: 50px;
+    width: 100%;
+}
+
+main .trending .CardContainer .card .description{
+    padding: 0px 5px;
+    height: 70px;
+    width: 100%;
+}
+
+main .trending .CardContainer .card .durationContainer{
+    padding: 0px 5px;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .trending .CardContainer .card .durationContainer .duration{    
+    padding: 0px 5px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+main .popular{
+    width: 100%;
+    height: max-content;
+    min-height:50vh ;
+    padding: 0 20px;
+}
+
+main .popular .CardContainer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 20px 20px;
+    min-width: 100%;
+    height: 470px;
+    padding: 20px 0px 10px;
+}
+
+main .popular .CardContainer .card{
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    flex: 0 0 auto;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: var(--card-color);
+    box-shadow: 1px 1px 2px var(--card-Shadow-color);
+    transition: top 0.5s ease;  
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .popular .CardContainer .card img,
+main .popular .CardContainer .card .dataContainer{
+    height: 200px;
+    width: 200px;
+}
+
+main .popular .CardContainer .card .dataContainer{
+    padding: 5px 10px;
+}
+
+main .popular .CardContainer .card .dataContainer > label{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+main .popular .CardContainer .card .dataContainer input{
+    display: none;
+}
+
+main .popular .CardContainer .card .dataContainer .modalContainer{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--theme-color-1);
+    color: var(--font-color);
+}
+
+main .popular .CardContainer .card .dataContainer input:checked + label + .modalContainer{
+    display: block;
+}
+
+main .popular .CardContainer .card .dataContainer .modalContainer .modalClose{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+main .popular .CardContainer .card .dataContainer .modalContainer .modalData{
+    height: 135px;
+    width: 100%;
+}
+
+main .popular .CardContainer .card .dataContainer .modalContainer .watchNow-btn{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+main .popular .CardContainer .card .dataContainer .modalContainer .watchNow-btn a{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 50px;
+    color: var(--theme-color-1);
+    background-color: var(--font-color);
+}
+
+@media (max-width: 750px) {
+
+    .navbar{
+        padding: 10px 20px;
+    }
+
+    .navbar .icon{
+        width: 40px;
+        height: 100%;
+    }
+
+    .navbar .icon .iconName{
+        display: none;
+    }    
+
+    .navbar nav{
+        height: 150px;
+        width: 100%;
+        display: none;
+        flex-direction: column;        
+        align-items: flex-end;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 3px var(--nav-shadow);        
+        border-bottom: 1px solid var(--nav-shadow);
+    }
+
+    .navbar .hamburger{
+        display: flex;
+        color: var(--font-color);
+    }
+
+    #hamburger-inp:checked + label + nav{
+        display: flex;
+        background-color: var(--nav-color);
+    }
+
+    main .heroContainer{
+        width: 100%;
+        height: 100vh;
+        min-height: 400px;
+        background-image: none;
+        background-color: var(--theme-color-1);
+    }
+
+    main .heroContainer .hero{
+        padding: 10vh 15% 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main .heroContainer .hero .intro{
+        width: 100%;
+        min-width: 0;
+    }
+
+    main .heroContainer .hero .intro h1{
+        font-size: 2rem;
+        padding: 1rem 0rem 0rem;
+    }
+
+    main .heroContainer .hero .intro p{
+        font-size: 1rem;
+        padding: 0.5rem 0rem 1rem;
+    }
+
+    main .heroContainer .hero .intro .trendingBtn{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    main .heroContainer .hero .svg img{
+        height: 200px;
+    }
+
+    main .trending h1{
+        font-size: 2rem;
+    }
+
+    main .trending p{
+        font-size: 1rem;
+    }
+
+}

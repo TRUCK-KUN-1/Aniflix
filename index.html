@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniflix</title>
+    <link rel="icon" href="images\letter_a_transparent.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="icon">
+            <div class="iconImg">
+                <img src="images\letter_a_transparent.png" alt="">
+            </div>
+            <div class="iconName">
+                <p>niflix</p>
+            </div>
+        </div>
+        <input type="checkbox" id="hamburger-inp">
+        <label for="hamburger-inp" class="hamburger">☰</label>        
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#trending">Trending</a>
+            <a href="#popular">Popular Shows</a>
+            <a href="#reviews">Reviews</a>
+            <input type="checkbox" id="light-dark-inp">
+            <label for="light-dark-inp" class="light-dark">
+                light/Dark
+            </label>
+        </nav>
+    </header>
+    <main>
+        <div class="heroContainer" id="home">
+            <div class="hero">
+                <div class="intro">
+                    <h1>Aniflix</h1>
+                    <p>Sail through the trending Animes</p>
+                    <a href="#trending" class="trendingBtn">Trending Movies</a>
+                </div>
+                <div class="svg">
+                    <img src="images\One_piece.svg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="trending" id="trending">
+            <h1>Trending Movies</h1>
+            <p>The Movies Everyone's Talking about</p>
+            <div class="CardContainer">
+                <div class="card">
+                    <div class="trendingCardHover">
+                        <a href="">Watch Now</a>
+                        <input type="checkbox" id="watchlist-inp11">
+                        <label for="watchlist-inp11" class="watchlist1">Watchlist +</label>
+                        <label for="watchlist-inp11" class="watchlist2">Watchlist ✔</label>
+                    </div>
+                    <img src="images\trending\look back.jpeg" alt="">
+                    <h3>Look Back</h3>
+                    <p class="description">When art speaks louder than words—and cuts deeper too.</p>
+                    <div class="durationContainer">
+                        <p class="duration">0hr 55min</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="trendingCardHover">
+                        <a href="">Watch Now</a>
+                        <input type="checkbox" id="watchlist-inp12">
+                        <label for="watchlist-inp12" class="watchlist1">Watchlist +</label>
+                        <label for="watchlist-inp12" class="watchlist2">Watchlist ✔</label>
+                    </div>
+                    <img src="images\trending\spy x familiy.png" alt="">
+                    <h3>Spy x Family Code: White</h3>
+                    <p class="description">Spy action? Check. Waifu power? Check. Anya being iconic? Double check.</p>
+                    <div class="durationContainer">
+                        <p class="duration">1hr 50min</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="trendingCardHover">
+                        <a href="">Watch Now</a>
+                        <input type="checkbox" id="watchlist-inp13">
+                        <label for="watchlist-inp13" class="watchlist1">Watchlist +</label>
+                        <label for="watchlist-inp13" class="watchlist2">Watchlist ✔</label>
+                    </div>
+                    <img src="images\trending\my oni girl.png" alt="">
+                    <h3>My Oni Girl</h3>
+                    <p class="description">Shy boy meets fiery oni—emotions (and umbrellas) fly!</p>
+                    <div class="durationContainer">
+                        <p class="duration">1hr 52min</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="trendingCardHover">
+                        <a href="">Watch Now</a>
+                        <input type="checkbox" id="watchlist-inp14">
+                        <label for="watchlist-inp14" class="watchlist1">Watchlist +</label>
+                        <label for="watchlist-inp14" class="watchlist2">Watchlist ✔</label>
+                    </div>
+                    <img src="images\trending\suzume.png" alt="">
+                    <h3>Suzume</h3>
+                    <p class="description">It's not just about closing doors, it's about opening hearts.</p>
+                    <div class="durationContainer">
+                        <p class="duration">2hr 02min</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="trendingCardHover">
+                        <a href="">Watch Now</a>
+                        <input type="checkbox" id="watchlist-inp15">
+                        <label for="watchlist-inp15" class="watchlist1">Watchlist +</label>
+                        <label for="watchlist-inp15" class="watchlist2">Watchlist ✔</label>
+                    </div>
+                    <img src="images\trending\haikyuu.png" alt="">
+                    <h3>Haikyu: The Dumpster Battle</h3>
+                    <p class="description">The ultimate showdown that fans have been waiting for—pure hype!</p>
+                    <div class="durationContainer">
+                        <p class="duration">1hr 25min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popular" id="popular">
+            <h1>Popular Shows</h1>
+            <p>The Movies Everyone's Talking about</p>
+            <div class="CardContainer">
+                <div class="card">
+                    <img src="images\popular\death note.jpeg" alt="">
+                    <div class="dataContainer">
+                        <h3>Death Note</h3>
+                        <h4>Genre: Supernatural</h4>
+                        <h4>Seasons: 1</h4>
+                        <h4>Episodes: 37</h4>
+                        <p class="description">A student gains a notebook that kills anyone whose name is written in it.</p>
+                        <input type="checkbox" id="modal1">
+                        <label for="modal1" class="modalOpen">Learn More</label>
+                        <div class="modalContainer">
+                            <label for="modal1" class="modalClose">X</label>
+                            <div class="modalData">
+                                <h3>Death Note</h3>
+                                <p>A high school student discovers a notebook that lets him kill anyone by writing their name, leading to a deadly game of justice and power.</p>
+                                <h4>Studio: Madhouse</h4>
+                            </div>
+                            <div class="watchNow-btn">
+                                <a href="">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\popular\dr.stone.png" alt="">
+                    <div class="dataContainer">
+                        <h3>Dr. Stone</h3>
+                        <h4>Genre: Sci-Fi</h4>
+                        <h4>Seasons: 4</h4>
+                        <h4>Episodes: 12 - 24</h4>
+                        <p class="description">Senku uses science to rebuild civilization after everyone is petrified.</p>
+                        <input type="checkbox" id="modal2">
+                        <label for="modal2" class="modalOpen">Learn More</label>
+                        <div class="modalContainer">
+                            <label for="modal2" class="modalClose">X</label>
+                            <div class="modalData">
+                                <h3>Dr. Stone</h3>
+                                <p>After a global petrification event, a teenage genius awakens thousands of years later and uses science to restore civilization.</p>
+                                <h4>Studio: TMS Entertainment</h4>
+                            </div>
+                            <div class="watchNow-btn">
+                                <a href="">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\popular\jjk.png" alt="">
+                    <div class="dataContainer">
+                        <h3>Jujutsu Kaisen</h3>
+                        <h4>Genre: Action, Fantasy</h4>
+                        <h4>Seasons: 2</h4>
+                        <h4>Episodes: 24</h4>
+                        <p class="description">Yuji fights curses after becoming a host to a powerful spirit.</p>
+                        <input type="checkbox" id="modal3">
+                        <label for="modal3" class="modalOpen">Learn More</label>
+                        <div class="modalContainer">
+                            <label for="modal3" class="modalClose">X</label>
+                            <div class="modalData">
+                                <h3>Jujutsu Kaisen</h3>
+                                <p>A teenager becomes host to a deadly curse and joins a secret organization to fight supernatural threats.</p>
+                                <h4>Studio: MAPPA</h4>
+                            </div>
+                            <div class="watchNow-btn">
+                                <a href="">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\popular\one piece.png" alt="">
+                    <div class="dataContainer">
+                        <h3>One Piece</h3>
+                        <h4>Genre:  Adventure</h4>
+                        <h4>Seasons: 21</h4>
+                        <h4>Episodes: 1130(in total)</h4>
+                        <p class="description">Luffy and his crew search for the legendary treasure to become Pirate King.</p>
+                        <input type="checkbox" id="modal4">
+                        <label for="modal4" class="modalOpen">Learn More</label>
+                        <div class="modalContainer">
+                            <label for="modal4" class="modalClose">X</label>
+                            <div class="modalData">
+                                <h3>One Piece</h3>
+                                <p>A young pirate, Luffy, sails with his crew in search of the legendary treasure “One Piece” to become the Pirate King.</p>
+                                <h4>Studio: Toei Animation</h4>
+                            </div>
+                            <div class="watchNow-btn">
+                                <a href="">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\popular\one punch man.png" alt="">
+                    <div class="dataContainer">
+                        <h3>One Punch Man</h3>
+                        <h4>Genre: Action, Comedy</h4>
+                        <h4>Seasons: 2</h4>
+                        <h4>Episodes: 12</h4>
+                        <p class="description"> Saitama defeats any enemy with one punch and searches for a real challenge.</p>
+                        <input type="checkbox" id="modal5">
+                        <label for="modal5" class="modalOpen">Learn More</label>
+                        <div class="modalContainer">
+                            <label for="modal5" class="modalClose">X</label>
+                            <div class="modalData">
+                                <h3>One Punch Man</h3>
+                                <p>Saitama is a hero who defeats any enemy with a single punch, but struggles with boredom and seeks a real challenge.</p>
+                                <h4>Studio: Madhouse, J.C. Staff</h4>
+                            </div>
+                            <div class="watchNow-btn">
+                                <a href="">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\popular\sword art online.png" alt="">
+                    <div class="dataContainer">
+                        <h3>Sword Art Online</h3>
+                        <h4>Genre: Isekai, Sci-fi</h4>
+                        <h4>Seasons: 3</h4>
+                        <h4>Episodes: 11 - 24</h4>
+                        <p class="description">Players trapped in a VR game must survive or die in real life.</p>
+                        <input type="checkbox" id="modal6">
+                        <label for="modal6" class="modalOpen">Learn More</label>
+                        <div class="modalContainer">
+                            <label for="modal6" class="modalClose">X</label>
+                            <div class="modalData">
+                                <h3>Sword Art Online</h3>
+                                <p>Players trapped in a VR MMORPG must fight to survive, as dying in-game means dying in real life.</p>
+                                <h4>Studio: A-1 Pictures</h4>
+                            </div>
+                            <div class="watchNow-btn">
+                                <a href="">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews" id="reviews"></div>
+    </main>
+    <footer></footer>
+</body>
+</html>
